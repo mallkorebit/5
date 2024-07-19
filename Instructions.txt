@@ -1,0 +1,71 @@
+# zap-client [Apex External Cheat For Linux]
+Updated to Game Version v3.0.72.12 (Season 21) (25.06.24)
+
+By Gerosity
+
+All credits to original owners
+
+Instructions are down below
+
+Never cheat on a main account, its not worth it
+
+# Before Installation
+Install Linux
+
+    Not hard at all, use Google & YouTube. Search "How to dual boot Linux and windows"
+    NOTE: It is recommened to use GNOME or Cinnamon as your desktop environment. KDE Plasma is known not to allow the overlay to be drawn above the game.
+    Other desktop environments may work
+
+Install Steam & Apex
+  
+    Use YouTube & Google for this.
+
+# Installation
+1. Install dependencies
+Debian dependencies
+    
+    sudo apt-get install -y libudev-dev
+    sudo apt install cmake xorg-dev libglu1-mesa-dev libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev
+    sudo apt install -y libudev-dev libglu1-mesa-dev libxkbcommon-dev libwayland-dev git cmake g++ gcc libinput-dev libsoil-dev
+    sudo apt-get install build-essential
+    sudo apt-get install libx11-dev
+    sudo apt-get install libxtst-dev
+
+Arch dependencies - Look through the UC thread for any more information
+    
+    sudo pacman -Sy libudev0 cmake xorg-server git base-devel libx11 libxtst
+
+2. Build glfw
+
+    git clone https://github.com/glfw/glfw.git
+    cd glfw
+    mkdir build
+    cd build
+    cmake ..
+    make
+    sudo make install
+
+3. Exit the terminal
+
+4. Open Terminal In zap-client Folder
+
+5. Build & Run
+
+    mkdir build
+    cd build
+    cmake ..
+    make
+    chmod +x run.sh
+    ./run.sh
+
+6. Press Insert to toggle the Menu (You can only interact with the Menu and the game when the menu is active).
+Note: You will need to alt+tab between the cheat overlay and apex.
+
+# Credits:
+    Nexilist/xap-client - for the base, massive credits to them
+    arturzxc/grinder - alternate aimbot mode, most of the misc features
+    T_TApe - custom config system
+    UnknownCheats - A TON of help, offsets, many additional features & more
+    wafflesgaming - aimbot help, Extra ESP Features such as 2D Corners
+    0xAgartha & ghostrazzor - run.sh script (Randomises zapclient binary & Hides PID before execution)
+    hir0xy - Version Checker, Overlay Fixes, Cleaner GUI & optimizations here and there
